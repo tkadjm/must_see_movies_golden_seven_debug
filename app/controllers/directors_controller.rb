@@ -19,7 +19,7 @@ class DirectorsController < ApplicationController
 
     @director.save
 
-    render("show")
+    redirect_to("http://localhost:3000/directors")
   end
 
   def edit_form
@@ -36,7 +36,7 @@ class DirectorsController < ApplicationController
 
     @director.save
 
-    render("show")
+   redirect_to("http://localhost:3000/directors")
   end
 
   def destroy
