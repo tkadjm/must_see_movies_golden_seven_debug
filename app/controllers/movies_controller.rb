@@ -11,15 +11,16 @@ class MoviesController < ApplicationController
   end
 
   def create_row
+
+    @movie = Movie.new
     @movie.title = params[:the_title]
     @movie.year = params[:the_year]
     @movie.duration = params[:the_duration]
     @movie.description = params[:the_description]
     @movie.image_url = params[:the_image_url]
-    @movie.director_id = params[:the_director_id]
+    @movie.director_id = params[:director_id]
 
     @movie.save
-
     render("show")
   end
 
